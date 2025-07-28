@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  padding: 120px 20px;
+  background: linear-gradient(145deg, #1a1a40, #2d2d86);
+  background-image: url('https://images.unsplash.com/photo-1585202917420-6f6be1ff44f1?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin: 0;
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.hero-btn {
+  margin-top: 30px;
+  padding: 14px 40px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 50px;
+  color: #491515;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff);
+  background-size: 400%;
+  filter: blur(20px);
+  animation: neonMove 4s linear infinite;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+@keyframes neonMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #0ff, 0 0 60px #0ff inset;
+}
+
+.section {
+  padding: 100px 20px;
+  background: linear-gradient(to right, #1f1c2c, #928dab);
+  margin-top: 2px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero-btn:hover::before {
+  animation: neonMove 2s linear infinite;
+  color: #472121;
+  text-size-adjust: 22px;
+}
+.hero-btn {
+  margin-top: 30px;
+  padding: 14px 40px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff inset;
+  text-shadow: 0 0 5px #fff;
+}
+
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff);
+  background-size: 400%;
+  filter: blur(30px);
+  animation: neonMove 4s linear infinite;
+  z-index: -1;
+  opacity: 0.6;
+}
+
+@keyframes neonMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #0ff, 0 0 60px #0ff inset;
+}
+.hero::after {
+  background: rgba(0, 0, 0, 0.6);  /* This dims everything */
+}
+.hero::after {
+  background: rgba(0, 0, 0, 0.3);  /* Less dark */
+}
+.hero-btn {
+  margin-top: 40px;
+  padding: 16px 48px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #00f0ff, #ff00e0);
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #ff00e0;
+  position: relative;
+  z-index: 2;
+  transition: all 4s ease;
+}
+
+.hero-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #00f0ff, 0 0 60px #ff00e0;
+}
+

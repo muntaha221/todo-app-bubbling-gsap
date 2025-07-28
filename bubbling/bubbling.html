@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Bubbling Example</title>
+    <style>
+        .outer {
+            padding: 40px;
+            background: #e0e0e0;
+        }
+        .inner {
+            padding: 20px;
+            background: #b3c6ff;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer" id="outer">
+        Outer Div
+        <div class="inner" id="inner">
+            Inner Div
+            <button id="btn">Click Me</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('outer').addEventListener('click', function() {
+            alert('Outer DIV clicked!');
+        });
+
+        document.getElementById('inner').addEventListener('click', function() {
+            alert('Inner DIV clicked!');
+        });
+
+        document.getElementById('btn').addEventListener('click', function(event) {
+            alert('Button clicked!');
+            // Uncomment the next line to stop bubbling
+            // event.stopPropagation();
+        });
+    </script>
+</body>
+</html>
